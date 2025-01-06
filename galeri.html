@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Dokumentasi Proyek</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #4113c0;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .gallery-container {
+            padding: 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery-item .description {
+            padding: 15px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Galeri Dokumentasi Proyek</h1>
+        <h3>Proyek Keteknikan Kelompok 3</h3>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-grid">
+            <!-- Item Galeri 1 -->
+            <div class="gallery-item">
+                <img src="img1.jpg" alt="Dokumentasi Alat 1">
+                <div class="description">Alat Monitoring Cuaca</div>
+            </div>
+
+            <!-- Item Galeri 2 -->
+            <div class="gallery-item">
+                <img src="img2.jpg" alt="Dokumentasi Alat 2">
+                <div class="description">Proses Perakitan Alat</div>
+            </div>
+
+            <!-- Item Galeri 3 -->
+            <div class="gallery-item">
+                <img src="img3.jpg" alt="Dokumentasi Proyek 3">
+                <div class="description">Tim Proyek</div>
+            </div>
+
+            <!-- Item Galeri 4 -->
+            <div class="gallery-item">
+                <img src="image3.jpg" alt="Dokumentasi Proyek 3">
+                <div class="description">Tim Proyek</div>
+            </div>
+
+            <!-- Tambahkan lebih banyak item sesuai kebutuhan -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Proyek Keteknikan Kelompok 3 - Institut Teknologi Nasional Yogyakarta</p>
+    </div>
+</body>
+
+</html>

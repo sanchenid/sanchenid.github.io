@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto Slider</title>
+    <style>
+        /* Gaya Slider */
+        .slider {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            border: none;
+        }
+
+        /* Tombol Navigasi */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 18px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Indikator Bulat */
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider">
+        <div class="slides">
+            <img src="images/wks.jpg" alt="Gambar 1">
+            <img src="images/wks.jpg" alt="Gambar 2">
+            <img src="images/wks.jpg" alt="Gambar 3">
+        </div>
+
+        <!-- Tombol Navigasi -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Indikator Bulat -->
+    <div class="dots">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+
+    <script>
+        // JavaScript untuk Slider
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const dots = document.querySelectorAll('.dot');
+            const totalSlides = document.querySelectorAll('.slides img').length;
+
+            // Looping Slide
+            if (index >= totalSlides) currentIndex = 0;
+            else if (index < 0) currentIndex = totalSlides - 1;
+            else currentIndex = index;
+
+            // Geser Gambar
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            // Update Indikator
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentIndex].classList.add('active');
+        }
+
+        function moveSlide(step) {
+            showSlide(currentIndex + step);
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+        }
+
+        // Slider Otomatis
+        setInterval(() => moveSlide(1), 3000); // Pindah setiap 3 detik
+
+        // Tampilkan slide pertama
+        showSlide(currentIndex);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "457647509240",
+    "project_id": "sistem-monitoring-cuaca",
+    "storage_bucket": "sistem-monitoring-cuaca.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457647509240:android:7352b5566c893c6e0af50d",
+        "android_client_info": {
+          "package_name": "com.sanchenid.simoncu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBO3vIuhEEm_5tSUd572H6eT8tyV5_wkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
