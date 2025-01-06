@@ -124,7 +124,7 @@
             margin: 0 5px;
             text-decoration: none;
             color: white;
-            background-color: #575fcf;
+            background-color: #4c7acf;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
@@ -134,7 +134,7 @@
         }
 
         .tab.active {
-            background-color: #252a6e;
+            background-color: #993112;
             font-weight: bold;
         }
     </style>
@@ -144,11 +144,14 @@
 
     <div class="header">
         <h1>DASHBOARD MONITORING CUACA</h1>
-        <h2>Proyek Keteknikan Kelompok 3</h2>
+        <h4>Proyek Keteknikan Kelompok 3</h4>
+        <h2>Institut Teknologi Nasional Yogyakarta</h2>
         <nav class="tabs">
-            <a href="Simoncu13.html" class="tab">Beranda</a>
-            <a href="tentangkami.html" class="tab">Tentang Kami</a>
-            <a href="info.html" class="tab">Informasi Lebih Lanjut</a>
+            <a href="Simoncu13.html" class="tab">Home</a>
+            <a href="tentangkami.html" class="tab">About us</a>
+            <a href="info.html" class="tab">More</a>
+            <a href="galeri.html" class="tab">Galery</a>
+            <a href="blog.html" class="tab">Article</a>
         </nav>
     </div>
 
@@ -207,7 +210,12 @@
             <h3>Air Pressure</h3>
             <div class="value" id="airPressureValue">-- atm</div>
         </div>
-
+        <!-- attitute -->
+        <div class="card">
+            <i class="material-icons icon">M</i>
+            <h3>attitude</h3>
+            <div class="value" id="airPressureValue">-- meter</div>
+        </div>
 
 
     </div>
