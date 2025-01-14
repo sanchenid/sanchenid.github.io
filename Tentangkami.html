@@ -52,15 +52,58 @@
             background-color: #252a6e;
             font-weight: bold;
         }
+        .about {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.team-photos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about p {
+    color: #555;
+    line-height: 1.6;
+}
+
     </style>
 </head>
 <body>
     <div class="header">
         <h1>Tentang Kami</h1>
         <nav class="tabs">
-            <a href="Simoncu13.html" class="tab">Beranda</a>
-            <a href="tentangkami.html" class="tab">Tentang Kami</a>
-            <a href="info.html" class="tab">Informasi Lebih Lanjut</a>
+            <a href="index.html" class="tab">Home</a>
+            <a href="tentangkami.html" class="tab">About us</a>
+            <a href="info.html" class="tab">More</a>
+            <a href="galeri.html" class="tab">Galery</a>
+            <a href="blog.html" class="tab">Article</a>
         </nav>
     </div>
 
@@ -80,18 +123,23 @@
 
         <h2>Tim Kami</h2>
         <div class="team">
-            <p>Proyek ini dikerjakan oleh kelompok 3 yang terdiri dari:</p>
+            <p>Kami adalah bagian dari tim proyek keteknikan, Anggota tim kami adalah::</p>
             <ul>
-                <li>Wisnu Kusuma Sandjaya</li>
+                <li>Wisnu Kusuma Sandjaya</li> 
                 <li>Yahya Harista Ghani</li>
                 <li>Nur Rahman</li>
             </ul>
         </div>
     </div>
     <div class="about">
-        <h2>di desain oleh</h2>
-        <img src="images/wks.jpg" alt="Foto Tim Kami" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" width="200">
+        <h2>Di Desain Oleh</h2>
+        <div class="team-photos">
+            <img src="images/wks.jpg" alt="Foto Anggota 1" class="team-photo">
+            <img src="images/person2.jpg" alt="Foto Anggota 2" class="team-photo">
+            <img src="images/person3.jpg" alt="Foto Anggota 3" class="team-photo">
+        </div>
         <p>Kami adalah tim yang berfokus pada pengembangan sistem monitoring cuaca berbasis teknologi IoT.</p>
     </div>
+    
 </body>
 </html>

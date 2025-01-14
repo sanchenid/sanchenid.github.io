@@ -222,15 +222,15 @@
 
 
     <script>
-        // Simulate data from sensors
-        // Replace this with actual data from your ESP32 using AJAX or WebSocket
-        setInterval(() => {
-            document.getElementById("tempValue").textContent = "25°C";  // Example temperature value
-            document.getElementById("humidityValue").textContent = "60%";  // Example humidity value
-            document.getElementById("luxValue").textContent = "500 Lx";  // Example light intensity
-            document.getElementById("weatherStatus").textContent = "Cerah";  // Example weather status
-            document.getElementById("windSpeed").textContent = "15 km/h";  // Example wind speed
-        }, 2000);  // Update data every 2 seconds
+       function fetchData() {
+        fetch('/')
+          .then(response => response.text())
+          .then(html => {
+            document.body.innerHTML = html;
+          });
+      }
+
+      setInterval(fetchData, 1000);
     </script>
 
 </body>
